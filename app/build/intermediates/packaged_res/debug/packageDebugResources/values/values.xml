@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">secondAndroidHITA</string>
+    <string name="gcm_defaultSenderId" translatable="false">523288252783</string>
+    <string name="google_api_key" translatable="false">AIzaSyDoumee-YXs5dGXHUqDi33Z4W5WcldO5zI</string>
+    <string name="google_app_id" translatable="false">1:523288252783:android:5e5483caaad5e4f5fb989a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDoumee-YXs5dGXHUqDi33Z4W5WcldO5zI</string>
+    <string name="google_storage_bucket" translatable="false">myproject-e38c2.firebasestorage.app</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="project_id" translatable="false">myproject-e38c2</string>
+    <style name="Base.Theme.SecondAndroidHITA" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.SecondAndroidHITA" parent="Base.Theme.SecondAndroidHITA"/>
+</resources>

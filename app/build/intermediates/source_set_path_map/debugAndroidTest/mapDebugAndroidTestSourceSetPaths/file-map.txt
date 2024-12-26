@@ -1,0 +1,5 @@
+com.example.secondandroidhita.test.app-core-1.6.1-0 C:\Users\Yoel\.gradle\caches\8.9\transforms\6f65476f5ab269e4dad886bc143de720\transformed\core-1.6.1\res
+com.example.secondandroidhita.test.app-androidTest-1 C:\Users\Yoel\AndroidStudioProjects\secondAndroidHITAA\app\build\generated\res\resValues\androidTest\debug
+com.example.secondandroidhita.test.app-mergeDebugAndroidTestResources-2 C:\Users\Yoel\AndroidStudioProjects\secondAndroidHITAA\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.secondandroidhita.test.app-mergeDebugAndroidTestResources-3 C:\Users\Yoel\AndroidStudioProjects\secondAndroidHITAA\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.secondandroidhita.test.app-debugAndroidTest-4 C:\Users\Yoel\AndroidStudioProjects\secondAndroidHITAA\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
