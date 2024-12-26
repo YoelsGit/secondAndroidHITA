@@ -1,7 +1,6 @@
 package com.example.secondandroidhita;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -9,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.secondandroidhita.activities.MainActivity;
 
@@ -81,6 +82,15 @@ public class FragmentOne extends Fragment {
             @Override
             public void onClick(View v) {
 
+
+                String email = ((EditText) view.findViewById(R.id.email)).getText().toString();
+                String password = ((EditText) view.findViewById(R.id.editTextTextPassword)).getText().toString();
+
+                if (email.isEmpty() || password.isEmpty()){
+                    Toast.makeText(getActivity(), "fields are empty", Toast.LENGTH_LONG).show();
+
+                    return;
+                }
                 MainActivity mainactivity = (MainActivity) getActivity();
                 mainactivity.login();
 

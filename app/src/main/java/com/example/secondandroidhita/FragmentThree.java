@@ -7,12 +7,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.secondandroidhita.CustomeAdapter;
-import com.example.secondandroidhita.DataModel;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,6 @@ public class FragmentThree extends Fragment {
 
     private ArrayList<DataModel> dataSet;
     private RecyclerView recyclerView;
-    private LinearLayoutManager layoutManager;
     private CustomeAdapter adapter;
 
     public FragmentThree() {
@@ -28,8 +28,7 @@ public class FragmentThree extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_three, container, false);
     }
@@ -41,12 +40,10 @@ public class FragmentThree extends Fragment {
         // Initialize RecyclerView
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        dataSet = new ArrayList<>();
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        // Assuming myData is a data structure or class with the necessary arrays
-        // Replace 'myData' with the actual data source
+        // Populate dataset
+        dataSet = new ArrayList<>();
         for (int i = 0; i < myData.nameArray.length; i++) {
             dataSet.add(new DataModel(
                     myData.nameArray[i],
@@ -57,7 +54,22 @@ public class FragmentThree extends Fragment {
         }
 
         // Set up the adapter
-        adapter = new CustomeAdapter(dataSet);  // Use dataSet here, not dataList
+        adapter = new CustomeAdapter(dataSet, getContext());
         recyclerView.setAdapter(adapter);
+
+        // Search functionality
+        EditText searchBar = view.findViewById(R.id.searchBar);
+        searchBar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                adapter.getFilter().filter(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
     }
 }
